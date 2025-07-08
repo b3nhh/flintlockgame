@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cln1arkmji1ri"]
+
+[ext_resource type="Script" uid="uid://f6es5xt4kchr" path="res://player_2.gd" id="1_8xjnt"]
+[ext_resource type="PackedScene" uid="uid://bqpwh2qhltcpn" path="res://Scenes/Rifle.tscn" id="2_ufh5k"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sbgyl"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xc2g5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8xjnt"]
+height = 1.2
+
+[node name="Player2" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+floor_max_angle = 1.0472
+script = ExtResource("1_8xjnt")
+
+[node name="std_collision_shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_sbgyl")
+
+[node name="std_mesh_instance" type="MeshInstance3D" parent="std_collision_shape"]
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_xc2g5")
+skeleton = NodePath("../..")
+
+[node name="crc_collision_shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624536, 0)
+shape = SubResource("CapsuleShape3D_8xjnt")
+disabled = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 2, 0)
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="Head" type="Node3D" parent="Neck"]
+
+[node name="Eyes" type="Node3D" parent="Neck/Head"]
+
+[node name="Camera3D" type="Camera3D" parent="Neck/Head/Eyes"]
+transform = Transform3D(1, -2.72637e-41, -2.84217e-14, 0, 1, -9.59255e-28, 2.84217e-14, 9.59255e-28, 1, 0, 0, 0)
+current = true
+
+[node name="Rifle" parent="Neck/Head/Eyes/Camera3D" instance=ExtResource("2_ufh5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270765, -0.266362, -0.542779)
