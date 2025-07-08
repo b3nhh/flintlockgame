@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="flintlock-alpha"
-run/main_scene="uid://cfkmyl2xlcy56"
+config/name="fpscontrollertestr"
+run/main_scene="res://Testing.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+"<<<<<<<HEAD[editor_plugins]enabled"=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
 [editor_plugins]
 

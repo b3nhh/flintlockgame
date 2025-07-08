@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bqpwh2qhltcpn"]
 
 [ext_resource type="PackedScene" uid="uid://beylmx8mc8h0i" path="res://Models/SteampunkGun/Steampunk Rifle.glb" id="1_3vau2"]
-[ext_resource type="Script" uid="uid://bu77ltahueuq6" path="res://Scenes/rifle.gd" id="2_e32yv"]
+[ext_resource type="Script" uid="uid://bu77ltahueuq6" path="res://Scripts/rifle.gd" id="2_e32yv"]
 [ext_resource type="Material" uid="uid://bds863cq6gruq" path="res://Models/SteampunkGun/Metal.tres" id="2_guumd"]
 [ext_resource type="Material" uid="uid://dsbxaujpenxuh" path="res://Models/SteampunkGun/Metal3.tres" id="2_sebp6"]
 [ext_resource type="Material" uid="uid://bi0jeon1tbvt0" path="res://Models/SteampunkGun/Wood.tres" id="3_d42oy"]
