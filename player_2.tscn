@@ -45,3 +45,4 @@ current = true
 
 [node name="Rifle" parent="Neck/Head/Eyes/Camera3D" instance=ExtResource("2_ufh5k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270765, -0.266362, -0.542779)
+script = null
